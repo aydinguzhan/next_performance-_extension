@@ -1,0 +1,257 @@
+:root {
+  color-scheme: light;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #102033;
+  background:
+    radial-gradient(circle at top left, rgba(255, 214, 102, 0.32), transparent 34%),
+    radial-gradient(circle at top right, rgba(95, 162, 255, 0.24), transparent 28%),
+    linear-gradient(180deg, #f8f4ec 0%, #eff5ff 100%);
+}
+
+body {
+  margin: 0;
+  min-width: 420px;
+}
+
+.popup {
+  padding: 18px;
+}
+
+.hero {
+  padding: 18px;
+  border: 1px solid rgba(16, 32, 51, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px rgba(28, 53, 87, 0.08);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #a24d00;
+}
+
+.hero-top {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.05;
+}
+
+.description {
+  margin: 8px 0 0;
+  max-width: 240px;
+  color: #4d6178;
+  font-size: 13px;
+}
+
+.status-pill {
+  flex-shrink: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-pill.is-active {
+  background: #d9fbe8;
+  color: #11643a;
+}
+
+.status-pill.is-passive {
+  background: #ffe3e3;
+  color: #9f2f2f;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.toggle-button,
+.copy-button,
+.dashboard-button {
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.toggle-button:hover,
+.copy-button:hover,
+.dashboard-button:hover {
+  transform: translateY(-1px);
+}
+
+.toggle-button {
+  border: 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+  color: #f8fafc;
+  box-shadow: 0 10px 24px rgba(29, 78, 216, 0.2);
+}
+
+.copy-button {
+  border: 1px solid rgba(16, 32, 51, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  color: #102033;
+}
+
+.dashboard-button {
+  border: 1px solid rgba(29, 78, 216, 0.16);
+  background: rgba(232, 240, 255, 0.9);
+  color: #1d4ed8;
+}
+
+.copy-feedback {
+  margin: 10px 0 0;
+  min-height: 18px;
+  color: #1d4ed8;
+  font-size: 12px;
+}
+
+.panel {
+  margin-top: 14px;
+  border: 1px solid rgba(16, 32, 51, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 16px 34px rgba(28, 53, 87, 0.07);
+}
+
+.summary-panel,
+.recommendations-panel,
+.empty-state {
+  padding: 16px;
+}
+
+.summary-header,
+.panel-heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-label {
+  margin: 0 0 6px;
+  color: #6b7f95;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.router-badge {
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: #e8f0ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.url {
+  margin: 12px 0 0;
+  color: #4d6178;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.metric-card {
+  min-height: 108px;
+  padding: 14px;
+  border: 1px solid rgba(16, 32, 51, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 24px rgba(28, 53, 87, 0.06);
+}
+
+.metric-label {
+  margin: 0;
+  color: #6b7f95;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.metric-value {
+  margin: 10px 0 6px;
+  color: #102033;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.metric-hint {
+  margin: 0;
+  color: #4d6178;
+  font-size: 12px;
+}
+
+.captured-at {
+  color: #6b7f95;
+  font-size: 12px;
+}
+
+.recommendation-list {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recommendation-item {
+  position: relative;
+  margin-top: 10px;
+  padding-left: 18px;
+  color: #23374d;
+  font-size: 13px;
+}
+
+.recommendation-item::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+}
+
+.empty-state h2 {
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #4d6178;
+  font-size: 13px;
+}
